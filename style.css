@@ -42,7 +42,7 @@ h3 { font-size: 22px; margin: 0; }
   position: relative;
   background:
     linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.50)),
-    url("images/building.jpg") center / cover no-repeat;
+    url("Images/building.jpg") center / cover no-repeat;
   color: #fff;
   padding: 90px 20px 70px;
 }
