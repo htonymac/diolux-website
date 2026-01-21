@@ -5,15 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Diolux Serviced Apartments | Short-Let (Sangotedo, Ajah – Lekki)</title>
   <meta name="description" content="Diolux Serviced Apartments offers calm, secure 2-bedroom short-let apartments in Sangotedo, Ajah – Lekki, Lagos. Book via WhatsApp or email." />
+  <meta name="theme-color" content="#0b1220"/>
+
+  <!-- Fonts (safe to remove if you want fully offline fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/favicon.ico">
-<link rel="icon" href="favicon.ico">
-<link rel="shortcut icon" href="/favicon.ico">
+  <!-- Favicon (keep favicon.ico in the site root) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
 </head>
 
 <body>
 
-<header class="hero">
+  <!-- Top navigation -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Diolux Serviced Apartments">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-name">Diolux</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#apartments">Apartments</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="https://wa.me/2349135158679" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+<header class="hero" id="top">
   <div class="hero-inner">
     <div class="badge">Short-let Only</div>
 
@@ -39,6 +64,21 @@
       <a class="link" href="mailto:info@dioluxapartments.com?subject=General%20Enquiry%20-%20Diolux">
         General enquiries
       </a>
+    </div>
+
+    <div class="trust-row" aria-label="Highlights">
+      <div class="trust-item">
+        <div class="trust-title">Secure Estate</div>
+        <div class="trust-text">24/7 security</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-title">Reliable Power</div>
+        <div class="trust-text">NEPA + Gen + Inverter</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-title">Fast Booking</div>
+        <div class="trust-text">WhatsApp response</div>
+      </div>
     </div>
   </div>
 </header>
@@ -89,9 +129,9 @@
       </div>
 
       <div class="gallery">
-        <!-- Update filenames to match your images folder -->
+        <!-- Keep filenames exactly as they already are in your images folder -->
         <img src="images/flat1-living.jpg" alt="Flat 1 Living Room">
-        <img src="images/flat1-bathroom.jpg" alt="Flat 1 Living Room angle">
+        <img src="images/flat1-bathroom.jpg" alt="Flat 1 Bathroom">
         <img src="images/flat1-bedroom-a.jpg" alt="Flat 1 Bedroom A">
         <img src="images/flat1-bedroom-b.jpg" alt="Flat 1 Bedroom B">
         <img src="images/flat1-kitchen.jpg" alt="Flat 1 Kitchen">
@@ -116,9 +156,9 @@
       </div>
 
       <div class="gallery">
-        <!-- Update filenames to match your images folder -->
+        <!-- Keep filenames exactly as they already are in your images folder -->
         <img src="images/flat2-living.jpg" alt="Flat 2 Living Room">
-        <img src="images/flat2-bathroom.jpg" alt="Flat 2 Living Room angle">
+        <img src="images/flat2-bathroom.jpg" alt="Flat 2 Bathroom">
         <img src="images/flat2-bedroom-a.jpg" alt="Flat 2 Bedroom A">
         <img src="images/flat2-bedroom-b.jpg" alt="Flat 2 Bedroom B">
         <img src="images/flat2-kitchen.jpg" alt="Flat 2 Kitchen">
@@ -200,8 +240,15 @@
 </footer>
 
 <script>
-  // Optional tiny script for current year (safe)
+  // Current year (safe)
   document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Tiny shadow on topbar after scroll (no dependencies)
+  const topbar = document.querySelector('.topbar');
+  window.addEventListener('scroll', () => {
+    if (!topbar) return;
+    topbar.classList.toggle('scrolled', window.scrollY > 10);
+  });
 </script>
 
 </body>
